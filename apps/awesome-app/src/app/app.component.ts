@@ -1,14 +1,16 @@
-import { Component } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { NxWelcomeComponent } from "./nx-welcome.component";
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: "nx-dotnet-test-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  imports: [ RouterModule, CommonModule],
+  providers: [],
+  selector: 'nx-dotnet-test-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = "awesome-app";
+  title = 'awesome-app';
 }
