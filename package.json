@@ -2,12 +2,19 @@
   "name": "nx-dotnet-test",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "nx g @nx-dotnet/core:restore"
+  },
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@nrwl/js": "15.9.2",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "15.9.2",
-    "nx": "15.9.2"
+    "@nx-dotnet/core": "^1.22.0",
+    "@openapitools/openapi-generator-cli": "^2.6.0",
+    "nx": "15.9.2",
+    "@trumbitta/nx-plugin-openapi": "^1.12.1"
+  },
+  "dependencies": {
   }
 }

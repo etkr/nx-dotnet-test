@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{017D6A5D-013A-435C-8256-67F128E9F379}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxDotnetTest.AwesomeApi", "apps\awesome-api\NxDotnetTest.AwesomeApi.csproj", "{50374F78-6BD8-4400-A88B-3696D11A93D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxDotnetTest.AwesomeApi.Test", "apps\awesome-api-test\NxDotnetTest.AwesomeApi.Test.csproj", "{821BA3A9-BCDC-49DF-A6C9-2855F84E7E6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50374F78-6BD8-4400-A88B-3696D11A93D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50374F78-6BD8-4400-A88B-3696D11A93D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50374F78-6BD8-4400-A88B-3696D11A93D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50374F78-6BD8-4400-A88B-3696D11A93D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{821BA3A9-BCDC-49DF-A6C9-2855F84E7E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821BA3A9-BCDC-49DF-A6C9-2855F84E7E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821BA3A9-BCDC-49DF-A6C9-2855F84E7E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821BA3A9-BCDC-49DF-A6C9-2855F84E7E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50374F78-6BD8-4400-A88B-3696D11A93D9} = {017D6A5D-013A-435C-8256-67F128E9F379}
+		{821BA3A9-BCDC-49DF-A6C9-2855F84E7E6D} = {017D6A5D-013A-435C-8256-67F128E9F379}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+{
+  "name": "generated-awesome-api-types",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/generated/awesome-api-types/src",
+  "projectType": "library",
+  "targets": {
+    "codegen": {
+      "executor": "@trumbitta/nx-plugin-openapi:generate-api-lib-sources",
+      "options": {
+        "generator": "typescript-fetch",
+        "sourceSpecPathOrUrl": "libs/generated/awesome-api-swagger/swagger.json"
+      },
+      "dependsOn": [
+        "^swagger"
+      ]
+    }
+  },
+  "implicitDependencies": [
+    "awesome-api-swagger"
+  ],
+  "tags": []
+}
