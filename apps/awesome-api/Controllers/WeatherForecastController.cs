@@ -7,20 +7,11 @@ namespace NxDotnetTest.AwesomeApi.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
+    private WeatherForecastService WeatherForecastService { get; }
 
-
-    private readonly ILogger<WeatherForecastController> _logger;
-    private  WeatherForecastService WeatherForecastService {get;set;}
-
-    public WeatherForecastController(WeatherForecastService weatherForecastService, ILogger<WeatherForecastController> logger)
-    {
+    public WeatherForecastController(WeatherForecastService weatherForecastService) =>
         WeatherForecastService = weatherForecastService;
-        _logger = logger;
-    }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
-    {
-        return WeatherForecastService.GenerateWeatherForecast();
-    }
+    public IEnumerable<WeatherForecast> GetWeatherForecast() => WeatherForecastService.GenerateWeatherForecast();
 }

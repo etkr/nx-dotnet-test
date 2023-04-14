@@ -16,4 +16,5 @@ export class WheatherForecastComponent {
 
   constructor(private weatherForecastService: WeatherForecastService) {
     this.weatherForecasts$ = weatherForecastService.getWeatherForecast();
-  }}
+  }
+}
