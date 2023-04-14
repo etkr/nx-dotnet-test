@@ -1,5 +1,7 @@
+using NxDotnetTest.AwesomeLib;
+
 var builder = WebApplication.CreateBuilder(args);
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+const string myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 // Add services to the container.
 
@@ -9,24 +11,25 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
-  options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
-  {
-    policy.WithOrigins("http://localhost:4200")
-          .AllowAnyHeader()
-          .AllowAnyMethod();
-  });
+    options.AddPolicy(name: myAllowSpecificOrigins, policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
 });
+builder.Services.AddLibServices();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-  app.UseSwagger();
-  app.UseSwaggerUI();
-
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
-app.UseCors(MyAllowSpecificOrigins);
+
+app.UseCors(myAllowSpecificOrigins);
 
 app.UseHttpsRedirection();
 
